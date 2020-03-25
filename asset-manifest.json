@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dogapi/static/css/main.70e7e0a6.chunk.css",
+    "main.js": "/dogapi/static/js/main.9b8769f4.chunk.js",
+    "main.js.map": "/dogapi/static/js/main.9b8769f4.chunk.js.map",
+    "runtime-main.js": "/dogapi/static/js/runtime-main.0bda3c86.js",
+    "runtime-main.js.map": "/dogapi/static/js/runtime-main.0bda3c86.js.map",
+    "static/js/2.90fc6046.chunk.js": "/dogapi/static/js/2.90fc6046.chunk.js",
+    "static/js/2.90fc6046.chunk.js.map": "/dogapi/static/js/2.90fc6046.chunk.js.map",
+    "index.html": "/dogapi/index.html",
+    "precache-manifest.4c9a1ae5e57887a32f4279b79ab78938.js": "/dogapi/precache-manifest.4c9a1ae5e57887a32f4279b79ab78938.js",
+    "service-worker.js": "/dogapi/service-worker.js",
+    "static/css/main.70e7e0a6.chunk.css.map": "/dogapi/static/css/main.70e7e0a6.chunk.css.map",
+    "static/js/2.90fc6046.chunk.js.LICENSE.txt": "/dogapi/static/js/2.90fc6046.chunk.js.LICENSE.txt",
+    "static/media/dog.png": "/dogapi/static/media/dog.bb5574e8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bda3c86.js",
+    "static/js/2.90fc6046.chunk.js",
+    "static/css/main.70e7e0a6.chunk.css",
+    "static/js/main.9b8769f4.chunk.js"
+  ]
+}
