@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Dog from "./components/dog-image/dog-image";
+import Select from "./components/select/select";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    dogList: null,
+    selectedDog: null,
+    error: false
+  };
+
+  componentDidMount = async () => {
+    try {
+      const response = await fetch("https://dog.ceo/api/breeds/list/all");
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({
+          dogList: Object.keys(data.message)
+        });
+      } else {
+        this.setState({ error: true });
+        alert("Sorry, cannot display the data");
+      }
+    } catch (e) {
+      this.setState({ error: true });
+      alert("Sorry, cannot display the data");
+    }
+  };
+
+  selectHandler = breed => {
+    this.setState({
+      selectedDog: breed
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Select
+          dogList={this.state.dogList}
+          onSelect={this.selectHandler}
+          error={this.state.error}
+        />
+        <Dog breed={this.state.selectedDog} />
+      </div>
+    );
+  }
 }
 
 export default App;
