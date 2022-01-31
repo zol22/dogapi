@@ -5,6 +5,7 @@ import App from "../../App";
 
 const Home = () => {
   const [load, setLoad] = useState(false);
+
   const onload = () => {
     setLoad(!load);
   };
@@ -14,9 +15,12 @@ const Home = () => {
       <img className="dog-icon-img" src={dog} alt="dog-icon"></img>
 
       <h2 className="dog-breed-title">Dog Breed Finder</h2>
-      <button onClick={onload} className="start">
+     
+      {!load ? (
+        <button onClick={onload} className="start">
         Start
       </button>
+      ): null}
 
       <div>{load ? <App /> : null}</div>
     </div>
